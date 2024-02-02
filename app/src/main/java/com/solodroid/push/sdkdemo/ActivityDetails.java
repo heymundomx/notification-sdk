@@ -1,5 +1,6 @@
 package com.solodroid.push.sdkdemo;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -31,6 +32,7 @@ public class ActivityDetails extends AppCompatActivity {
         initToolbar();
     }
 
+    @SuppressLint("SetTextI18n")
     private void initView() {
         toolbar = findViewById(R.id.toolbar);
         txtPostId = findViewById(R.id.txt_post_id);
