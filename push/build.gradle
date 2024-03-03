@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.solodroid.push.sdk'
+    namespace 'com.heymundomx.push.sdk'
     compileSdk 33
     defaultConfig {
         minSdk 21

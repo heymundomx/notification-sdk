@@ -1,4 +1,4 @@
-package com.solodroid.push.sdk.provider;
+package com.heymundomx.push.sdk.provider;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,7 @@ import androidx.core.app.ActivityCompat;
 import com.onesignal.OneSignal;
 import com.onesignal.debug.LogLevel;
 import com.onesignal.notifications.INotification;
-import com.solodroid.push.sdk.utils.OnNotificationClickListener;
+import com.heymundomx.push.sdk.utils.OnNotificationClickListener;
 
 import org.json.JSONObject;
 

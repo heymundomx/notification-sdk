@@ -1,9 +1,9 @@
-package com.solodroid.push.sdkdemo;
+package com.heymundomx.push.sdkdemo;
 
 import android.app.Application;
 import android.content.Intent;
 
-import com.solodroid.push.sdk.provider.OneSignalPush;
+import com.heymundomx.push.sdk.provider.OneSignalPush;
 
 public class MyApplication extends Application {
 

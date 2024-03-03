@@ -1,4 +1,4 @@
-package com.solodroid.push.sdk.utils;
+package com.heymundomx.push.sdk.utils;
 
 public interface OnNotificationClickListener {
 

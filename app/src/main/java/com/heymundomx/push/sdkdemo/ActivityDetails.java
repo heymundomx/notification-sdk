@@ -1,4 +1,4 @@
-package com.solodroid.push.sdkdemo;
+package com.heymundomx.push.sdkdemo;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -9,7 +9,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.solodroid.push.sdk.provider.OneSignalPush;
+import com.heymundomx.push.sdk.provider.OneSignalPush;
+import com.heymundomx.push.sdkdemo.R;
 
 public class ActivityDetails extends AppCompatActivity {
 
