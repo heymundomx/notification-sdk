@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.heymundomx.push.sdk.provider.OneSignalPush;
-import com.heymundomx.push.sdkdemo.R;
 
 public class ActivityDetails extends AppCompatActivity {
 
