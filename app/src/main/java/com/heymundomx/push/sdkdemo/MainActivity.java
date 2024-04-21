@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void notificationOpenHandler(Intent getIntent) {
-
         if (getIntent.hasExtra(OneSignalPush.EXTRA_ID)) {
 
             String id = getIntent.getStringExtra(OneSignalPush.EXTRA_ID);

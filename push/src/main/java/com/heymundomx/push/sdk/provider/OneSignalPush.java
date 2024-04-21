@@ -31,6 +31,7 @@ public class OneSignalPush {
         private String notificationLaunchUrl = "";
         private String uniqueId = "";
         private String postId = "";
+        private int postID;
         private String link = "";
 
         public Builder(Context context) {
@@ -47,10 +48,9 @@ public class OneSignalPush {
         }
 
         public void initNotification(OnNotificationClickListener onNotificationClickListener) {
-
             OneSignal.getDebug().setLogLevel(LogLevel.VERBOSE);
             OneSignal.initWithContext(context, oneSignalAppId);
-            OneSignal.getUser().getPushSubscription().optIn();
+            //OneSignal.getUser().getPushSubscription().optIn();
 
             OneSignal.getNotifications().addClickListener(result -> {
                 INotification notification = result.getNotification();
@@ -85,6 +85,40 @@ public class OneSignalPush {
             });
         }
 
+        public void buildNotification(OnNotificationClickListener onNotificationClickListener) {
+            OneSignal.getDebug().setLogLevel(LogLevel.VERBOSE);
+            OneSignal.initWithContext(context, oneSignalAppId);
+            //OneSignal.getUser().getPushSubscription().optIn();
+
+            OneSignal.getNotifications().addClickListener(result -> {
+                INotification notification = result.getNotification();
+                JSONObject data = notification.getAdditionalData();
+
+                notificationId = result.getNotification().getNotificationId();
+                notificationTitle = result.getNotification().getTitle();
+                notificationMessage = result.getNotification().getBody();
+                notificationBigImage = result.getNotification().getBigPicture();
+                notificationLaunchUrl = result.getNotification().getLaunchURL();
+                OneSignalPush.Data.id = notificationId;
+                OneSignalPush.Data.title = notificationTitle;
+                OneSignalPush.Data.message = notificationMessage;
+                OneSignalPush.Data.bigImage = notificationBigImage;
+                OneSignalPush.Data.launchUrl = notificationLaunchUrl;
+                try {
+                    if (data != null) {
+                        postID = data.getInt(OneSignalPush.EXTRA_POST_ID);
+                        OneSignalPush.AdditionalData.postID = postID;
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.d(TAG, "error: " + e.getMessage());
+                }
+
+                onNotificationClickListener.onComplete();
+
+            });
+        }
+
         public void requestNotificationPermission() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 if (context.checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
@@ -106,6 +140,7 @@ public class OneSignalPush {
     public static class AdditionalData {
         public static String uniqueId = "";
         public static String postId = "";
+        public static int postID;
         public static String link = "";
     }
 
