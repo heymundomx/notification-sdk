@@ -18,7 +18,7 @@ public class ActivitySplash extends AppCompatActivity {
 
     private void startMainActivity() {
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
-        finish();
+        finish()
     }
 
 }
