@@ -42,7 +42,7 @@
         </activity>
 
         <activity android:name=".ActivityDetails"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+            android:configChanges="keybard|keyboardHidden|orientation|screenSize" />
 
     </application>
 
