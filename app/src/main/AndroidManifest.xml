@@ -19,9 +19,7 @@
 
         <activity
             android:name=".ActivitySplash"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:launchMode="standard">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,9 +29,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:launchMode="standard">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,8 +37,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ActivityDetails"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name=".ActivityDetails" />
 
     </application>
 
