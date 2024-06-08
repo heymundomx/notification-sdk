@@ -127,6 +127,10 @@ public class OneSignalPush {
             OneSignal.getUser().getPushSubscription().optOut();
         }
 
+        public String getUserSubscriptionId() {
+            return OneSignal.getUser().getPushSubscription().getId();
+        }
+
         public void requestNotificationPermission() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 if (context.checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
