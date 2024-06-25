@@ -76,7 +76,6 @@ public class OneSignalPush {
                         OneSignalPush.AdditionalData.link = link;
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                     Log.d(TAG, "error: " + e.getMessage());
                 }
 
@@ -110,7 +109,6 @@ public class OneSignalPush {
                         OneSignalPush.AdditionalData.postID = postID;
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                     Log.d(TAG, "error: " + e.getMessage());
                 }
 

@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
             String postId = getIntent.getStringExtra(OneSignalPush.EXTRA_POST_ID);
             String link = getIntent.getStringExtra(OneSignalPush.EXTRA_LINK);
 
-            if (link != null && !link.equals("")) {
+            if (link != null && !link.isEmpty()) {
                 if (!link.equals("0")) {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
                 }
             }
 
-            if (postId != null && !postId.equals("")) {
+            if (postId != null && !postId.isEmpty()) {
                 if (!postId.equals("0")) {
                     Intent intent = new Intent(getApplicationContext(), ActivityDetails.class);
                     intent.putExtra(OneSignalPush.EXTRA_UNIQUE_ID, uniqueId);
