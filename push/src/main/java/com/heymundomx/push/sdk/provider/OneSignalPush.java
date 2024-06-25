@@ -76,7 +76,7 @@ public class OneSignalPush {
                         OneSignalPush.AdditionalData.link = link;
                     }
                 } catch (Exception e) {
-                    Log.d(TAG, "error: " + e.getMessage());
+                    Log.e(TAG, "error: " + e.getMessage());
                 }
 
                 onNotificationClickListener.onComplete();
@@ -109,7 +109,7 @@ public class OneSignalPush {
                         OneSignalPush.AdditionalData.postID = postID;
                     }
                 } catch (Exception e) {
-                    Log.d(TAG, "error: " + e.getMessage());
+                    Log.e(TAG, "error: " + e.getMessage());
                 }
 
                 onNotificationClickListener.onComplete();
