@@ -7,7 +7,7 @@
 | 1.x.x   | :white_check_mark: |
 
 ## Scope
-This policy applies to the following notification SDKs:
+This policy applies to the following notification SDK:
 - OneSignal
 
-This policy applies to OneSignal and code implementations, our library is secure.
+This policy applies to OneSignal SDK and code implementations, our library is secure.
