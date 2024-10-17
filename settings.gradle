@@ -13,6 +13,6 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "notification-sdk"
+rootProject.name = "Notification-SDK"
 include ':app'
 include ':push'
