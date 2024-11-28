@@ -3,13 +3,17 @@
 
     <style name="AppTheme" parent="BaseTheme" />
 
-    <style name="BaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="BaseTheme" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/color_light_status_bar</item>
+        <item name="colorAccent">@color/color_light_accent</item>
+        <item name="android:windowBackground">@color/color_light_background</item>
         <item name="android:fontFamily">@font/custom_font</item>
-        <item name="android:windowBackground">@color/colorLight</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="colorOnSurface">@color/colorPrimary</item>
+        <item name="colorOnSecondaryContainer">@color/colorPrimary</item>
+        <item name="android:popupElevation">3dp</item>
     </style>
 
 </resources>

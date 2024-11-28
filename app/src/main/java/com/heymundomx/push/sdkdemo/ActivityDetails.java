@@ -45,7 +45,7 @@ public class ActivityDetails extends AppCompatActivity {
         if (actionBar != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
-            getSupportActionBar().setTitle("Details");
+            getSupportActionBar().setTitle(getString(R.string.app_name));
         }
     }
 
