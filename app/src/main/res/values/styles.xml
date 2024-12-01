@@ -15,5 +15,4 @@
         <item name="colorOnSecondaryContainer">@color/colorPrimary</item>
         <item name="android:popupElevation">3dp</item>
     </style>
-
 </resources>
