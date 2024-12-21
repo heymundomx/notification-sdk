@@ -43,7 +43,7 @@ afterEvaluate {
                 from components["release"]
                 groupId = 'com.github.heymundomx'
                 artifactId = 'notification-sdk'
-                version = '79.0.2'
+                version = '80.0.0'
             }
         }
     }
