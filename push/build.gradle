@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
 }
 
 android {
@@ -17,11 +18,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     lintOptions {
         disable 'GradleDependency'
+    }
+    publishing {
+        singleVariant("release")
     }
 }
 
@@ -30,4 +34,17 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'com.onesignal:OneSignal:[5.0.0, 5.99.99]'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                from components["release"]
+                groupId = 'com.github.heymundomx'
+                artifactId = 'notification-sdk'
+                version = '77.0.1'
+            }
+        }
+    }
 }
