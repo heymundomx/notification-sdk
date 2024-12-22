@@ -7,7 +7,7 @@ android {
     namespace 'com.heymundomx.push.sdk'
     compileSdk 35
     defaultConfig {
-        minSdk 21
+        minSdk 24
         targetSdk 35
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -43,7 +43,7 @@ afterEvaluate {
                 from components["release"]
                 groupId = 'com.github.heymundomx'
                 artifactId = 'notification-sdk'
-                version = '81.0.0'
+                version = '81.0.1'
             }
         }
     }
