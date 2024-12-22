@@ -21,9 +21,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    lintOptions {
-        disable 'GradleDependency'
-    }
+    // lintOptions {
+    //     disable 'GradleDependency'
+    // }
     publishing {
         singleVariant("release")
     }
@@ -43,7 +43,7 @@ afterEvaluate {
                 from components["release"]
                 groupId = 'com.github.heymundomx'
                 artifactId = 'notification-sdk'
-                version = '80.1.0'
+                version = '80.1.1'
             }
         }
     }
