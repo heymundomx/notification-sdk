@@ -7,7 +7,7 @@ android {
     namespace 'com.heymundomx.push.sdk'
     compileSdk 35
     defaultConfig {
-        minSdk 21
+        minSdk 24
         targetSdk 35
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -33,7 +33,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
-    implementation 'com.onesignal:OneSignal:[5.0.0, 5.99.99]'
+    implementation 'com.onesignal:OneSignal:[5.0.0, 5.1.99]'
 }
 
 afterEvaluate {
@@ -43,7 +43,7 @@ afterEvaluate {
                 from components["release"]
                 groupId = 'com.github.heymundomx'
                 artifactId = 'notification-sdk'
-                version = '90.0.0'
+                version = '90.0.1'
             }
         }
     }
