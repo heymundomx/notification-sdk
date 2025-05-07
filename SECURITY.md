@@ -4,7 +4,7 @@
 
 | Version | Supported          |
 |---------| ------------------ |
-| 8x.x.x  | :white_check_mark: |
+| 9x.x.x  | :white_check_mark: |
 
 ## Scope
 This policy applies to the following notification SDK:
