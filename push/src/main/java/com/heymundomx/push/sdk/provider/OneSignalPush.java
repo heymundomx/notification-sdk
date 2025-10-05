@@ -10,7 +10,6 @@ import androidx.core.app.ActivityCompat;
 
 import com.onesignal.Continue;
 import com.onesignal.OneSignal;
-import com.onesignal.debug.LogLevel;
 import com.onesignal.notifications.INotification;
 import com.heymundomx.push.sdk.utils.OnNotificationClickListener;
 
@@ -49,7 +48,6 @@ public class OneSignalPush {
         }
 
         public void initNotification(OnNotificationClickListener onNotificationClickListener) {
-            OneSignal.getDebug().setLogLevel(LogLevel.VERBOSE);
             OneSignal.initWithContext(context, oneSignalAppId);
             //OneSignal.getUser().getPushSubscription().optIn();
 
@@ -86,7 +84,6 @@ public class OneSignalPush {
         }
 
         public void buildNotification(OnNotificationClickListener onNotificationClickListener) {
-            OneSignal.getDebug().setLogLevel(LogLevel.VERBOSE);
             OneSignal.initWithContext(context, oneSignalAppId);
             //OneSignal.getUser().getPushSubscription().optIn();
 
