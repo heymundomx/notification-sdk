@@ -3,11 +3,13 @@ package com.heymundomx.push.sdkdemo;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
@@ -23,6 +25,8 @@ public class ActivityDetails extends AppCompatActivity {
     String uniqueId = "";
     String postId = "";
     String link = "";
+    RelativeLayout parentView;
+    RelativeLayout backgroundView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +65,11 @@ public class ActivityDetails extends AppCompatActivity {
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setTitle(getString(R.string.app_name));
         }
+
+        parentView = findViewById(R.id.root_view);
+        backgroundView = findViewById(R.id.background_view);
+        parentView.setBackgroundColor(ContextCompat.getColor(this, R.color.color_light_status_bar));
+        backgroundView.setBackgroundColor(ContextCompat.getColor(this, R.color.color_light_background));
     }
 
     @Override

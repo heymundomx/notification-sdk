@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.RelativeLayout;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     OneSignalPush.Builder onesignal;
     Toolbar toolbar;
     String playerId = "";
+    RelativeLayout parentView;
+    RelativeLayout backgroundView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
         if (actionBar != null) {
             getSupportActionBar().setTitle(getString(R.string.app_name));
         }
+
+        parentView = findViewById(R.id.root_view);
+        backgroundView = findViewById(R.id.background_view);
+        parentView.setBackgroundColor(ContextCompat.getColor(this, R.color.color_light_status_bar));
+        backgroundView.setBackgroundColor(ContextCompat.getColor(this, R.color.color_light_background));
     }
 
     public void notificationOpenHandler(Intent getIntent) {
