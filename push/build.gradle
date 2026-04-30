@@ -5,10 +5,10 @@ plugins {
 
 android {
     namespace 'com.heymundomx.push.sdk'
-    compileSdk = 36
+    compileSdk = 37
     defaultConfig {
-        minSdk 24
-        targetSdk 36
+        minSdk 26
+        targetSdk 37
         consumerProguardFiles "consumer-rules.pro"
     }
     buildTypes {
@@ -21,9 +21,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    // lintOptions {
-    //     disable 'GradleDependency'
-    // }
     publishing {
         singleVariant("release")
     }
@@ -33,7 +30,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'com.google.android.material:material:1.13.0'
-    implementation 'com.onesignal:OneSignal:5.7.3'
+    implementation 'com.onesignal:OneSignal:5.8.0'
 }
 
 afterEvaluate {
@@ -43,7 +40,7 @@ afterEvaluate {
                 from components["release"]
                 groupId = 'com.github.heymundomx'
                 artifactId = 'notification-sdk'
-                version = '98.1.0'
+                version = '98.1.1'
             }
         }
     }

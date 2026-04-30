@@ -81,4 +81,9 @@ public class ActivityDetails extends AppCompatActivity {
         return super.onOptionsItemSelected(menuItem);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
 }

@@ -28,4 +28,9 @@ public class ActivitySplash extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
 }
