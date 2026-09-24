@@ -30,7 +30,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
     implementation 'androidx.appcompat:appcompat:1.8.0'
     implementation 'com.google.android.material:material:1.14.0'
-    implementation 'com.onesignal:OneSignal:5.9.9'
+    implementation 'com.onesignal:OneSignal:5.10.2'
 }
 
 afterEvaluate {
@@ -40,7 +40,7 @@ afterEvaluate {
                 from components["release"]
                 groupId = 'com.github.heymundomx'
                 artifactId = 'notification-sdk'
-                version = '99.5.0'
+                version = '99.5.1'
             }
         }
     }
